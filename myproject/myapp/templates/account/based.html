@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block page_content %}
+
+{% block content %}
+{% block Links %}
+
+{% endblock Links %}
+{% include "apps/calendar/calendar.html" %}
+{% endblock content %}
+
+<footer class="footer footer-alt">
+  2015 -
+  <script>document.write(new Date().getFullYear())</script> &copy; UBold theme by <a href=""
+    class="text-white-50">Coderthemes</a>
+</footer>
+{% include "partials/footer.html" %}
+
+{% endblock %}

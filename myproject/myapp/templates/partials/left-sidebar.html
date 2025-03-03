@@ -1,0 +1,804 @@
+{% load static i18n %}
+
+<!-- ========== Left Sidebar Start ========== -->
+<div class="left-side-menu">
+  <div class="h-100" data-simplebar>
+    <!-- User box -->
+    <div class="user-box text-center">
+      <img
+        src="{% static 'images/users/user-1.jpg' %}"
+        alt="user-img"
+        title="Mat Helme"
+        class="rounded-circle avatar-md"
+      />
+      <div class="dropdown">
+        <a
+          href="javascript: void(0);"
+          class="text-dark dropdown-toggle h5 mt-2 mb-1 d-block"
+          data-bs-toggle="dropdown"
+          >Geneva Kennedy</a
+        >
+        <div class="dropdown-menu user-pro-dropdown">
+          <!-- item-->
+          <a href="javascript:void(0);" class="dropdown-item notify-item">
+            <i class="fe-user me-1"></i>
+            <span>My Account</span>
+          </a>
+
+          <!-- item-->
+          <a href="javascript:void(0);" class="dropdown-item notify-item">
+            <i class="fe-settings me-1"></i>
+            <span>Settings</span>
+          </a>
+
+          <!-- item-->
+          <a href="javascript:void(0);" class="dropdown-item notify-item">
+            <i class="fe-lock me-1"></i>
+            <span>Lock Screen</span>
+          </a>
+
+          <!-- item-->
+          <a href="javascript:void(0);" class="dropdown-item notify-item">
+            <i class="fe-log-out me-1"></i>
+            <span>Logout</span>
+          </a>
+        </div>
+      </div>
+      <p class="text-muted">Admin Head</p>
+    </div>
+
+    <!--- Sidemenu -->
+    <div id="sidebar-menu">
+      <ul id="side-menu">
+        <li class="menu-title">Navigation</li>
+
+        <li>
+          <a href="#sidebarDashboards" data-bs-toggle="collapse">
+            <i data-feather="airplay"></i>
+            <span class="badge bg-success rounded-pill float-end">4</span>
+            <span> Dashboards </span>
+          </a>
+          <div class="collapse" id="sidebarDashboards">
+            <ul class="nav-second-level">
+              <li>
+                <a href="/dashboards/index">Dashboard 1</a>
+              </li>
+              <li>
+                <a href="/dashboards/dashboard_2">Dashboard 2</a>
+              </li>
+              <li>
+                <a href="/dashboards/dashboard_3">Dashboard 3</a>
+              </li>
+              <li>
+                <a href="/dashboards/dashboard_4">Dashboard 4</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="menu-title mt-2">Apps</li>
+
+        <li>
+          <a href="/calendar/calendar">
+            <i data-feather="calendar"></i>
+            <span> Calendar </span>
+          </a>
+        </li>
+
+        <li>
+          <a href="/chat/chat">
+            <i data-feather="message-square"></i>
+            <span> Chat </span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#sidebarEcommerce" data-bs-toggle="collapse">
+            <i data-feather="shopping-cart"></i>
+            <span> Ecommerce </span>
+            <span class="menu-arrow"></span>
+          </a>
+          <div class="collapse" id="sidebarEcommerce">
+            <ul class="nav-second-level">
+              <li>
+                <a href="/ecommerce/dashboard">Dashboard</a>
+              </li>
+              <li>
+                <a href="/ecommerce/products">Products</a>
+              </li>
+              <li>
+                <a href="/ecommerce/productdetail"
+                  >Product Detail</a
+                >
+              </li>
+              <li>
+                <a href="/ecommerce/productedit"
+                  >Add Product</a
+                >
+              </li>
+              <li>
+                <a href="/ecommerce/customers">Customers</a>
+              </li>
+              <li>
+                <a href="/ecommerce/orders">Orders</a>
+              </li>
+              <li>
+                <a href="/ecommerce/orderdetail"
+                  >Order Detail</a
+                >
+              </li>
+              <li>
+                <a href="/ecommerce/sellers">Sellers</a>
+              </li>
+              <li>
+                <a href="/ecommerce/ecart">Shopping Cart</a>
+              </li>
+              <li>
+                <a href="/ecommerce/checkout">Checkout</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li>
+          <a href="#sidebarCrm" data-bs-toggle="collapse">
+            <i data-feather="users"></i>
+            <span> CRM </span>
+            <span class="menu-arrow"></span>
+          </a>
+          <div class="collapse" id="sidebarCrm">
+            <ul class="nav-second-level">
+              <li>
+                <a href="/crm/crmdashboard">Dashboard</a>
+              </li>
+              <li>
+                <a href="/crm/contacts">Contacts</a>
+              </li>
+              <li>
+                <a href="/crm/opportunities">Opportunities</a>
+              </li>
+              <li>
+                <a href="/crm/leads">Leads</a>
+              </li>
+              <li>
+                <a href="/crm/crmcustomers">Customers</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li>
+          <a href="#sidebarEmail" data-bs-toggle="collapse">
+            <i data-feather="mail"></i>
+            <span> Email </span>
+            <span class="menu-arrow"></span>
+          </a>
+          <div class="collapse" id="sidebarEmail">
+            <ul class="nav-second-level">
+              <li>
+                <a href="/email/eml_inbox">Inbox</a>
+              </li>
+              <li>
+                <a href="/email/eml_read">Read Email</a>
+              </li>
+              <li>
+                <a href="/email/eml_compose">Compose Email</a>
+              </li>
+              <li>
+                <a href="/email/eml_temp">Email Templates</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li>
+          <a href="/about/social_feed">
+            <span class="badge bg-pink float-end">Hot</span>
+            <i data-feather="rss"></i>
+            <span> Social Feed </span>
+          </a>
+        </li>
+
+        <li>
+          <a href="/about/companies">
+            <i data-feather="activity"></i>
+            <span> Companies </span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#sidebarProjects" data-bs-toggle="collapse">
+            <i data-feather="briefcase"></i>
+            <span> Projects </span>
+            <span class="menu-arrow"></span>
+          </a>
+          <div class="collapse" id="sidebarProjects">
+            <ul class="nav-second-level">
+              <li>
+                <a href="/projects/proj_list">List</a>
+              </li>
+              <li>
+                <a href="/projects/proj_detail">Detail</a>
+              </li>
+              <li>
+                <a href="/projects/proj_create">Create Project</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li>
+          <a href="#sidebarTasks" data-bs-toggle="collapse">
+            <i data-feather="clipboard"></i>
+            <span> Tasks </span>
+            <span class="menu-arrow"></span>
+          </a>
+          <div class="collapse" id="sidebarTasks">
+            <ul class="nav-second-level">
+              <li>
+                <a href="/tasks/tsk_list">List</a>
+              </li>
+              <li>
+                <a href="/tasks/tsk_details">Details</a>
+              </li>
+              <li>
+                <a href="/tasks/tsk_kanban_board">Kanban Board</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li>
+          <a href="#sidebarContacts" data-bs-toggle="collapse">
+            <i data-feather="book"></i>
+            <span> Contacts </span>
+            <span class="menu-arrow"></span>
+          </a>
+          <div class="collapse" id="sidebarContacts">
+            <ul class="nav-second-level">
+              <li>
+                <a href="/contacts/list">Members List</a>
+              </li>
+              <li>
+                <a href="/contacts/profile">Profile</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li>
+          <a href="#sidebarTickets" data-bs-toggle="collapse">
+            <i data-feather="aperture"></i>
+            <span> Tickets </span>
+            <span class="menu-arrow"></span>
+          </a>
+          <div class="collapse" id="sidebarTickets">
+            <ul class="nav-second-level">
+              <li>
+                <a href="/tickets/tkt_list">List</a>
+              </li>
+              <li>
+                <a href="/tickets/tkt_detail">Detail</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li>
+          <a href="/about/file_manager">
+            <i data-feather="folder-plus"></i>
+            <span> File Manager </span>
+          </a>
+        </li>
+
+        <li class="menu-title mt-2">Custom</li>
+
+        <li>
+          <a href="#sidebarAuth" data-bs-toggle="collapse">
+            <i data-feather="file-text"></i>
+            <span> Auth Pages </span>
+            <span class="menu-arrow"></span>
+          </a>
+          <div class="collapse" id="sidebarAuth">
+            <ul class="nav-second-level">
+              <li>
+                <a href="#">Log In</a>
+              </li>
+              <li>
+                <a href="/auth/login_2">Log In 2</a>
+              </li>
+              <li>
+                <a href="#">Register</a>
+              </li>
+              <li>
+                <a href="/auth/register_2">Register 2</a>
+              </li>
+              <li>
+                <a href="/auth/signin_signup">Signin - Signup</a>
+              </li>
+              <li>
+                <a href="/auth/signin_signup2"
+                  >Signin - Signup 2</a
+                >
+              </li>
+              <li>
+                <a href="/auth/recoverpw">Recover Password</a>
+              </li>
+              <li>
+                <a href="/auth/recoverpw_2">Recover Password 2</a>
+              </li>
+              <li>
+                <a href="/auth/lockscreen">Lock Screen</a>
+              </li>
+              <li>
+                <a href="/auth/lockscreen2">Lock Screen 2</a>
+              </li>
+              <li>
+                <a href="#">Logout</a>
+              </li>
+              <li>
+                <a href="/auth/logout_2">Logout 2</a>
+              </li>
+              <li>
+                <a href="/auth/cnfrm">Confirm Mail</a>
+              </li>
+              <li>
+                <a href="/auth/cnfrm1">Confirm Mail 2</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li>
+          <a href="#sidebarExpages" data-bs-toggle="collapse">
+            <i data-feather="package"></i>
+            <span> Extra Pages </span>
+            <span class="menu-arrow"></span>
+          </a>
+          <div class="collapse" id="sidebarExpages">
+            <ul class="nav-second-level">
+              <li>
+                <a href="/extra/starter">Starter</a>
+              </li>
+              <li>
+                <a href="/extra/timeline">Timeline</a>
+              </li>
+              <li>
+                <a href="/extra/sitemap">Sitemap</a>
+              </li>
+              <li>
+                <a href="/extra/invoice">Invoice</a>
+              </li>
+              <li>
+                <a href="/extra/faqs">FAQs</a>
+              </li>
+              <li>
+                <a href="/extra/search_results">Search Results</a>
+              </li>
+              <li>
+                <a href="/extra/pricing">Pricing</a>
+              </li>
+              <li>
+                <a href="/extra/maintenance">Maintenance</a>
+              </li>
+              <li>
+                <a href="/extra/coming_soon">Coming Soon</a>
+              </li>
+              <li>
+                <a href="/extra/gallery">Gallery</a>
+              </li>
+              <li>
+                <a href="/extra/fof">Error 404</a>
+              </li>
+              <li>
+                <a href="/extra/fof_two">Error 404 Two</a>
+              </li>
+              <li>
+                <a href="/extra/fof_alt">Error 404-alt</a>
+              </li>
+              <li>
+                <a href="/extra/foo">Error 500</a>
+              </li>
+              <li>
+                <a href="/extra/foo_two">Error 500 Two</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li>
+          <a href="#sidebarLayouts" data-bs-toggle="collapse">
+            <i data-feather="layout"></i>
+            <span class="badge bg-blue float-end">New</span>
+            <span> Layouts </span>
+          </a>
+          <div class="collapse" id="sidebarLayouts">
+            <ul class="nav-second-level">
+              <li>
+                <a href="/layouts/horizontal">Horizontal</a>
+              </li>
+              <li>
+                <a href="/layouts/detached">Detached</a>
+              </li>
+              <li>
+                <a href="/layouts/two_column_layouts"
+                  >Two Column Menu</a
+                >
+              </li>
+              <li>
+                <a href="/layouts/two_tone_icons_layouts"
+                  >Two Tones Icons</a
+                >
+              </li>
+              <li>
+                <a href="/layouts/preloader_layouts">Preloader</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="menu-title mt-2">Components</li>
+
+        <li>
+          <a href="#sidebarBaseui" data-bs-toggle="collapse">
+            <i data-feather="pocket"></i>
+            <span> Base UI </span>
+            <span class="menu-arrow"></span>
+          </a>
+          <div class="collapse" id="sidebarBaseui">
+            <ul class="nav-second-level">
+              <li>
+                <a href="/baseui/bsbuttons"
+                  >Buttons</a
+                >
+              </li>
+              <li>
+                <a href="/baseui/compcards"
+                  >Cards</a
+                >
+              </li>
+              <li>
+                <a href="/baseui/compbaseavatars"
+                  >Avatars</a
+                >
+              </li>
+              <li>
+                <a href="/baseui/portlets"
+                  >Portlets</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/baseui/tabs_accordions"
+                  >Tabs & Accordions</a
+                >
+              </li>
+              <li>
+                <a href="/baseui/modals">Modals</a>
+              </li>
+              <li>
+                <a href="/baseui/progress">Progress</a>
+              </li>
+              <li>
+                <a href="/baseui/notifications">Notifications</a>
+              </li>
+              <li>
+                <a href="/baseui/offcanvas">Offcanvas</a>
+              </li>
+              <li>
+                <a href="/baseui/spinners">Spinners</a>
+              </li>
+              <li>
+                <a href="/baseui/images">Images</a>
+              </li>
+              <li>
+                <a href="/baseui/carousel">Carousel</a>
+              </li>
+              <li>
+                <a href="/baseui/list_group">List Group</a>
+              </li>
+              <li>
+                <a href="/baseui/video">Embed Video</a>
+              </li>
+              <li>
+                <a href="/baseui/dropdowns">Dropdowns</a>
+              </li>
+              <li>
+                <a href="/baseui/ribbons">Ribbons</a>
+              </li>
+              <li>
+                <a href="/baseui/tooltips_popovers">Tooltips & Popovers</a>
+              </li>
+              <li>
+                <a href="/baseui/general">General UI</a>
+              </li>
+              <li>
+                <a href="/baseui/typography">Typography</a>
+              </li>
+              <li>
+                <a href="/baseui/grid">Grid</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li>
+          <a href="#sidebarExtendedui" data-bs-toggle="collapse">
+            <i data-feather="layers"></i>
+            <span class="badge bg-info float-end">Hot</span>
+            <span> Extended UI </span>
+          </a>
+          <div class="collapse" id="sidebarExtendedui">
+            <ul class="nav-second-level">
+              <li>
+                <a href="/extended/nestable">Nestable List</a>
+              </li>
+              <li>
+                <a href="/extended/range_slider">Range Slider</a>
+              </li>
+              <li>
+                <a href="/extended/dragula">Dragula</a>
+              </li>
+              <li>
+                <a href="/extended/animation">Animation</a>
+              </li>
+              <li>
+                <a href="/extended/sweet_alert">Sweet Alert</a>
+              </li>
+              <li>
+                <a href="/extended/tour">Tour Page</a>
+              </li>
+              <li>
+                <a href="/extended/scrollspy">Scrollspy</a>
+              </li>
+              <li>
+                <a href="/extended/loading_buttons">Loading Buttons</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li>
+          <a href="/about/widgets">
+            <i data-feather="gift"></i>
+            <span> Widgets </span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#sidebarIcons" data-bs-toggle="collapse">
+            <i data-feather="cpu"></i>
+            <span> Icons </span>
+            <span class="menu-arrow"></span>
+          </a>
+          <div class="collapse" id="sidebarIcons">
+            <ul class="nav-second-level">
+              <li>
+                <a href="/icons/two_tone">Two Tone Icons</a>
+              </li>
+              <li>
+                <a href="/icons/feather">Feather Icons</a>
+              </li>
+              <li>
+                <a href="/icons/mdi">Material Design Icons</a>
+              </li>
+              <li>
+                <a href="/icons/dripicons">Dripicons</a>
+              </li>
+              <li>
+                <a href="/icons/front_awesome">Font Awesome 5</a>
+              </li>
+              <li>
+                <a href="/icons/themify">Themify</a>
+              </li>
+              <li>
+                <a href="/icons/simple_line">Simple Line</a>
+              </li>
+              <li>
+                <a href="/icons/weather">Weather</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li>
+          <a href="#sidebarForms" data-bs-toggle="collapse">
+            <i data-feather="bookmark"></i>
+            <span> Forms </span>
+            <span class="menu-arrow"></span>
+          </a>
+          <div class="collapse" id="sidebarForms">
+            <ul class="nav-second-level">
+              <li>
+                <a href="/forms/elements">General Elements</a>
+              </li>
+              <li>
+                <a href="/forms/advanced">Advanced</a>
+              </li>
+              <li>
+                <a href="/forms/validation">Validation</a>
+              </li>
+              <li>
+                <a href="/forms/pickers">Pickers</a>
+              </li>
+              <li>
+                <a href="/forms/wizard">Wizard</a>
+              </li>
+              <li>
+                <a href="/forms/masks">Masks</a>
+              </li>
+              <li>
+                <a href="/forms/quilljs">Quilljs Editor</a>
+              </li>
+              <li>
+                <a href="/forms/file_uloads">File Uploads</a>
+              </li>
+              <li>
+                <a href="/forms/x_editable">X Editable</a>
+              </li>
+              <li>
+                <a href="/forms/image_crop">Image Crop</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li>
+          <a href="#sidebarTables" data-bs-toggle="collapse">
+            <i data-feather="grid"></i>
+            <span> Tables </span>
+            <span class="menu-arrow"></span>
+          </a>
+          <div class="collapse" id="sidebarTables">
+            <ul class="nav-second-level">
+              <li>
+                <a href="/tables/basic">Basic Tables</a>
+              </li>
+              <li>
+                <a href="/tables/datatables">Data Tables</a>
+              </li>
+              <li>
+                <a href="/tables/editable">Editable Tables</a>
+              </li>
+              <li>
+                <a href="/tables/responsive">Responsive Tables</a>
+              </li>
+              <li>
+                <a href="/tables/footables">FooTable</a>
+              </li>
+              <li>
+                <a href="/tables/bootstrap">Bootstrap Tables</a>
+              </li>
+              <li>
+                <a href="/tables/tablesaw">Tablesaw Tables</a>
+              </li>
+              <li>
+                <a href="/tables/jsgrid">JsGrid Tables</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li>
+          <a href="#sidebarCharts" data-bs-toggle="collapse">
+            <i data-feather="bar-chart-2"></i>
+            <span> Charts </span>
+            <span class="menu-arrow"></span>
+          </a>
+          <div class="collapse" id="sidebarCharts">
+            <ul class="nav-second-level">
+              <li>
+                <a href="/charts/apex">Apex Charts</a>
+              </li>
+              <li>
+                <a href="/charts/flot">Flot Charts</a>
+              </li>
+              <li>
+                <a href="/charts/morris">Morris Charts</a>
+              </li>
+              <li>
+                <a href="/charts/chartjs">Chartjs Charts</a>
+              </li>
+              <li>
+                <a href="/charts/peity">Peity Charts</a>
+              </li>
+              <li>
+                <a href="/charts/chartist">Chartist Charts</a>
+              </li>
+              <li>
+                <a href="/charts/c3">C3 Charts</a>
+              </li>
+              <li>
+                <a href="/charts/sparklines">Sparklines Charts</a>
+              </li>
+              <li>
+                <a href="/charts/knob">Jquery Knob Charts</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li>
+          <a href="#sidebarMaps" data-bs-toggle="collapse">
+            <i data-feather="map"></i>
+            <span> Maps </span>
+            <span class="menu-arrow"></span>
+          </a>
+          <div class="collapse" id="sidebarMaps">
+            <ul class="nav-second-level">
+              <li>
+                <a href="/maps/google">Google Maps</a>
+              </li>
+              <li>
+                <a href="/maps/vector">Vector Maps</a>
+              </li>
+              <li>
+                <a href="/maps/mapael">Mapael Maps</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li>
+          <a href="#sidebarMultilevel" data-bs-toggle="collapse">
+            <i data-feather="share-2"></i>
+            <span> Multi Level </span>
+            <span class="menu-arrow"></span>
+          </a>
+          <div class="collapse" id="sidebarMultilevel">
+            <ul class="nav-second-level">
+              <li>
+                <a href="#sidebarMultilevel2" data-bs-toggle="collapse">
+                  Second Level <span class="menu-arrow"></span>
+                </a>
+                <div class="collapse" id="sidebarMultilevel2">
+                  <ul class="nav-second-level">
+                    <li>
+                      <a href="javascript: void(0);">Item 1</a>
+                    </li>
+                    <li>
+                      <a href="javascript: void(0);">Item 2</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <li>
+                <a href="#sidebarMultilevel3" data-bs-toggle="collapse">
+                  Third Level <span class="menu-arrow"></span>
+                </a>
+                <div class="collapse" id="sidebarMultilevel3">
+                  <ul class="nav-second-level">
+                    <li>
+                      <a href="javascript: void(0);">Item 1</a>
+                    </li>
+                    <li>
+                      <a href="#sidebarMultilevel4" data-bs-toggle="collapse">
+                        Item 2 <span class="menu-arrow"></span>
+                      </a>
+                      <div class="collapse" id="sidebarMultilevel4">
+                        <ul class="nav-second-level">
+                          <li>
+                            <a href="javascript: void(0);">Item 1</a>
+                          </li>
+                          <li>
+                            <a href="javascript: void(0);">Item 2</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!-- End Sidebar -->
+
+    <div class="clearfix"></div>
+  </div>
+  <!-- Sidebar -left -->
+</div>
+<!-- Left Sidebar End -->
